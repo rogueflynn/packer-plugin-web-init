@@ -16,15 +16,22 @@ release artifacts are created with the correct binaries and naming conventions.
 Please see the [GitHub template repository documentation](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
 for how to create a new repository from this template on GitHub.
 
-## Building and Installing  
-Once the repo is cloned you can run this command to build and install  
+## Installing the plugin from this repository  
+Copy prod.pkr.hcl from the example folder to your desktop and run  
+```bash
+packer init prod.pkr.hcl
+packer build prod.pkr.hcl
+```
+
+## Building and Installing for developing 
+Cloned the repo to your desktop and run this command to build and install  
 ```bash
 make dev
 ```
 ## Running  
 If everything installed correctly, you can this command to test the plugin out  
 ```bash
-packer build examples/builder.pkr.hcl
+packer build examples/dev.pkr.hcl
 ```
 This should result in a new directory called a web with index.html in the home directory  
 
